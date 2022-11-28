@@ -1,13 +1,13 @@
 import React from "react";
-import Market from "../components/Market";
+import MarketAccordion from "../components/MarketAccordion";
 import "../css/marketSelection.css";
 
 export default function MarketSelection() {
   return (
     <div className="market-selection">
-      <Market />
-      <Market />
-      <Market />
+      <MarketAccordion title="MONEYLINE" itemsInRow={2} />
+      <MarketAccordion title="BOTH TEAMS TO SCORE" />
+      <MarketAccordion title="ANY TIME GOALSCORER" />
     </div>
   );
 }

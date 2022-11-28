@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="app">
       <MarketSelection />
-      <MarketSelection />
     </div>
   );
 }
