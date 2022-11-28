@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
 import MarketSelection from "./pages/MarketSelection";
+import "./css/app.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <MarketSelection />
       <MarketSelection />
     </div>
   );
