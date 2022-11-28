@@ -25,12 +25,13 @@ export default function MarketAccordion({ title, itemsInRow, itemsArray }) {
         </Typography>
       </AccordionSummary>
       <AccordionDetails className="content">
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
-        <MarketItem width={itemsInRow == 3 ? "130px" : "200px"} />
+        {itemsArray.map((item) => (
+          <MarketItem
+            bet={item.bet}
+            value={item.value}
+            width={itemsInRow == 3 ? "130px" : "200px"}
+          />
+        ))}
       </AccordionDetails>
     </Accordion>
   );

@@ -11,7 +11,7 @@ export default function MarketSelection() {
         { bet: "Draw", value: "+200" },
         { bet: "Team 2", value: "+235" },
       ],
-      itemsInRow: 2,
+      itemsInRow: 3,
     },
     {
       title: "BOTH TEAMS TO SCORE",
@@ -19,7 +19,7 @@ export default function MarketSelection() {
         { bet: "Yes", value: "-110" },
         { bet: "No", value: "-120" },
       ],
-      itemsInRow: 3,
+      itemsInRow: 2,
     },
     {
       title: "ANY TIME GOALSCORER",
@@ -37,13 +37,13 @@ export default function MarketSelection() {
         { bet: "Player 11", value: "+1000" },
         { bet: "Player 12", value: "+1100" },
       ],
-      itemsInRow: 3,
+      itemsInRow: 2,
     },
   ];
   return (
     <div className="market-selection">
-      {data.map((accordion) => (
-        <MarketAccordion />
+      {data.map((accordion, index) => (
+        <MarketAccordion key={index} {...accordion} />
       ))}
     </div>
   );
