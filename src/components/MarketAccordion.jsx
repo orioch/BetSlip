@@ -19,7 +19,7 @@ export default function MarketAccordion({
   if (!title) title = "TITLE MISSING";
   if (!isMultiselect) isMultiselect = false;
   return (
-    <Accordion disableGutters className="market-accordion">
+    <Accordion disableGutters className="accordion">
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"

@@ -7,3 +7,46 @@
   justify-content: space-around;
   /* overflow: scroll; */
 }
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  bottom: 62.46px;
+  transition: background-color 1s;
+}
+.overlay.false {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.64);
+}
+.overlay.true {
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+.accordion .accordion-title {
+  padding: 0;
+  background: #a60000;
+  flex-direction: row-reverse;
+}
+
+/* MuiSvgIcon-root override the default css of mui icon */
+.MuiSvgIcon-root {
+  color: #ffffff;
+
+  margin: 0 8px 0 8px;
+}
+.accordion-title h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
