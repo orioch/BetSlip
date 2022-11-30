@@ -4,12 +4,16 @@ const initialState = {
   betsData: {},
   counter: 0,
   valueCounter: 0,
+  isWindowOpen: false,
 };
 
 const betsSlice = createSlice({
   name: "bets",
   initialState,
   reducers: {
+    openCloseBetslip: (state) => {
+      state.isWindowOpen = !state.isWindowOpen;
+    },
     addBet: (state, action) => {
       const { title, bet, value, isMultiselect } = action.payload;
       if (!state.betsData[title]) state.betsData[title] = [];
@@ -38,5 +42,5 @@ const betsSlice = createSlice({
   },
 });
 
-export const { addBet, removeBet } = betsSlice.actions;
+export const { addBet, removeBet, openCloseBetslip } = betsSlice.actions;
 export default betsSlice.reducer;
