@@ -1,13 +1,5 @@
 .market-selection {
-  width: 428px;
-  height: 671px;
-  background: #ffffff;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: scroll;
+  margin-bottom: 62.46px;
 }
 
 .market-accordion {

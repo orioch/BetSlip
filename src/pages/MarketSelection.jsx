@@ -47,7 +47,6 @@ export default function MarketSelection() {
       {data.map((accordion, index) => (
         <MarketAccordion key={index} {...accordion} />
       ))}
-      <BetSlip />
     </div>
   );
 }
