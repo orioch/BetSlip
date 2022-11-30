@@ -43,8 +43,10 @@ const betsSlice = createSlice({
       let index = state.betsData[title].findIndex((item) => item.bet == bet);
       state.betsData[title].splice(index, 1);
       // remove single if exist
+
       index = state.singles.findIndex((item) => item.bet == bet);
-      if (index != -2) state.singles.splice(index, 1);
+
+      if (index != -1) state.singles.splice(index, 1);
     },
     changeValue: (state, action) => {
       state.valueCounter = Number(action.payload);

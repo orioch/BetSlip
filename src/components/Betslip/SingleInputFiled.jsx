@@ -12,6 +12,15 @@ export default function SingleInputFiled({ bet }) {
   const dispatch = useDispatch();
   const { singles } = useSelector((store) => store.betsSlice);
   const [textValue, setTextValue] = useState(0);
+
+  useEffect(() => {
+    let index = singles.findIndex((item) => item.bet == bet.bet);
+
+    if (index != -1) {
+      setTextValue(singles[index].value);
+    }
+  }, [singles]);
+
   // on every change, we create a new single (don't worry about double singles, the reducer addSingle check if the single already exsist, and replace it if it is)
   const handleTextChange = (e) => {
     if (e == "+1") {
@@ -46,6 +55,7 @@ export default function SingleInputFiled({ bet }) {
           value: Number(value),
         })
       );
+      return;
     }
     if (value == "-") {
       setTextValue(value);
