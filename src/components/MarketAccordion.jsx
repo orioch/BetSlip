@@ -18,7 +18,7 @@ export default function MarketAccordion({
   if (!itemsInRow || itemsInRow > 3) itemsInRow = 3; // 3 is the default number of items in row. items in row cant be more then 3.
   if (itemsInRow < 2) itemsInRow = 2; // items in row cant be less then 2
   if (!title) title = "TITLE MISSING";
-  if (isMultiselect == undefined) isMultiselect = false;
+  if (!isMultiselect) isMultiselect = false;
   return (
     <Accordion className="market-accordion">
       <AccordionSummary
@@ -36,8 +36,8 @@ export default function MarketAccordion({
             bet={item.bet}
             value={item.value}
             width={itemsInRow == 3 ? "130px" : "200px"}
-            isMultiselect
-            title
+            isMultiselect={isMultiselect}
+            title={title}
           />
         ))}
       </AccordionDetails>

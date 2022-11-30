@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 const initialState = {
-  betsData: [],
+  betsData: {},
 };
 
 const betsSlice = createSlice({
@@ -9,13 +9,19 @@ const betsSlice = createSlice({
   initialState,
   reducers: {
     addBet: (state, action) => {
-      state.betsData.push(action.payload);
+      const { title, bet, value, isMultiselect } = action.payload;
+      if (!state.betsData[title]) state.betsData[title] = [];
+      // if multiselect enable, push to the array. else - replace the current bet with the new one
+      if (isMultiselect) {
+        state.betsData[title].push({ bet, value });
+      } else {
+        state.betsData[title] = [{ bet, value }];
+      }
     },
     removeBet: (state, action) => {
-      const index = state.betsData.findIndex(
-        (item) => item.bet == action.payload.bet
-      );
-      state.betsData.splice(index, 1);
+      const { title, bet, value } = action.payload;
+      const index = state.betsData[title].findIndex((item) => item.bet == bet);
+      state.betsData[title].splice(index, 1);
     },
   },
 });
