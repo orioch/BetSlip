@@ -1,11 +1,14 @@
 import MarketSelection from "./pages/MarketSelection";
 import "./css/app.css";
+import React from "react";
+import BetSlipBar from "./components/Betslip/BetSlipBar";
 
 function App() {
   return (
-    <div className="app">
+    <React.Fragment>
       <MarketSelection />
-    </div>
+      <BetSlipBar />
+    </React.Fragment>
   );
 }
 

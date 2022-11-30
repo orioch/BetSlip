@@ -1,0 +1,48 @@
+.betslip-bar {
+  position: fixed;
+  bottom: 0;
+  background: #333333;
+  height: 62.46px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.betslip-bar .counter {
+  background-color: #1eb500;
+  height: 31.230777740478516px;
+  min-width: 29.0000057220459px;
+  width: fit-content;
+  border-radius: 50%;
+  line-height: 31.230777740478516px;
+  text-align: center;
+  margin-left: 22px;
+  vertical-align: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #ffffff;
+}
+
+.betslip-bar .counter.value {
+  min-width: 64px;
+  margin-left: auto;
+  margin-right: 22px;
+  border-radius: 80px 80px;
+
+  padding: 3.23px 12.69px 4.31px 13px;
+}
+.betslip-bar h1 {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
