@@ -5,6 +5,7 @@
   height: 62.46px;
   width: 100%;
   display: flex;
+  gap: 10px;
   justify-content: flex-start;
   align-items: center;
   padding: 0 22px 0 22px;
@@ -25,6 +26,16 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+
+  color: #ffffff;
+}
+
+.betslip h1 {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 
   color: #ffffff;
 }
