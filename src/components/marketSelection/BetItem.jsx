@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function MarketItem({ width, bet, value }) {
+export default function BetItem({ width, bet, value }) {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {

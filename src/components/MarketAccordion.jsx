@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
-import MarketItem from "./marketSelection/MarketItem";
+import BetItem from "./marketSelection/BetItem";
 
 export default function MarketAccordion({ title, itemsInRow, itemsArray }) {
   // if some prop is undifined, use the default value to avoid errors
@@ -26,7 +26,7 @@ export default function MarketAccordion({ title, itemsInRow, itemsArray }) {
       </AccordionSummary>
       <AccordionDetails className="content">
         {itemsArray.map((item) => (
-          <MarketItem
+          <BetItem
             bet={item.bet}
             value={item.value}
             width={itemsInRow == 3 ? "130px" : "200px"}
