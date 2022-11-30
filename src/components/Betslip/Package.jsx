@@ -10,9 +10,13 @@ import step from "../../media/step.svg";
 import line from "../../media/Line.svg";
 import React from "react";
 import { useSelector } from "react-redux";
+import { combineArrays } from "../../utils/utilitis";
 
 export default function Package() {
-  const { counter } = useSelector((store) => store.betsSlice);
+  const { counter, valueCounter, betsData } = useSelector(
+    (store) => store.betsSlice
+  );
+
   return (
     <Accordion disableGutters className="accordion">
       <AccordionSummary
@@ -35,23 +39,36 @@ export default function Package() {
           style={{ justifyContent: "space-between" }}
         >
           <h1>Team 1 vs Team 2</h1>
-          <h1>+237</h1>
+          <h1>
+            {" "}
+            {valueCounter > 0 ? "+" : ""}
+            {+valueCounter}
+          </h1>
         </div>
-        <div className="content-row">
-          <img className="step-img" src={step} />
-          <span className="bet-title">title</span>
-          <span className="bet-selection">bet</span>
-        </div>
-        <img className="line-img" src={line} />
-        <div className="content-row">
-          <img className="step-img" src={step} />
-          <span>{counter} selections</span>
-        </div>
-        <img className="line-img" src={line} />
-        <div className="content-row">
-          <img className="step-img" src={step} />
-          <span>{counter} selections</span>
-        </div>
+        {}
+
+        {/*  */}
+        {combineArrays(betsData).map((bet, index) => {
+          if (index == combineArrays(betsData).length - 1)
+            return (
+              <div className="content-row">
+                <img className="step-img" src={step} />
+                <span className="bet-title">{bet.title}</span>
+                <span className="bet-selection">{bet.bet}</span>
+              </div>
+            );
+          return (
+            <React.Fragment>
+              {" "}
+              <div className="content-row">
+                <img className="step-img" src={step} />
+                <span className="bet-title">{bet.title}</span>
+                <span className="bet-selection">{bet.bet}</span>
+              </div>
+              <img className="line-img" src={line} />
+            </React.Fragment>
+          );
+        })}
       </AccordionDetails>
     </Accordion>
   );

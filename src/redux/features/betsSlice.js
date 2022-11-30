@@ -21,7 +21,7 @@ const betsSlice = createSlice({
       if (isMultiselect) {
         state.valueCounter += Number(value);
         state.counter++;
-        state.betsData[title].push({ bet, value });
+        state.betsData[title].push({ title, bet, value });
       } else {
         if (state.betsData[title].length == 0) {
           state.counter++;
@@ -29,7 +29,7 @@ const betsSlice = createSlice({
           state.valueCounter -= Number(state.betsData[title][0].value);
         }
         state.valueCounter += Number(value);
-        state.betsData[title] = [{ bet, value }];
+        state.betsData[title] = [{ title, bet, value }];
       }
     },
     removeBet: (state, action) => {
