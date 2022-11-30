@@ -7,3 +7,19 @@
   justify-content: space-around;
   /* overflow: scroll; */
 }
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  bottom: 62.46px;
+  transition: background-color 1s;
+}
+.overlay.false {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.64);
+}
+.overlay.true {
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0);
+}

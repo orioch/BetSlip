@@ -47,3 +47,17 @@
 
   color: #ffffff;
 }
+
+.betslip-page {
+  position: fixed;
+  left: 43px;
+  bottom: 62.46px;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  transition: left 1s;
+}
+
+.betslip-page.open {
+  left: 100vw;
+}
