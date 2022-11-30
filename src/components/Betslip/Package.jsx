@@ -7,12 +7,15 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ctaImg from "../../media/redCta.svg";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { combineArrays } from "../../utils/utilitis";
 import PackageBetsList from "./PackageBetsList";
 import InputFiled from "./InputFiled";
 
+import { deletePackage } from "../../redux/features/betsSlice";
+
 export default function Package() {
+  const dispatch = useDispatch();
   const { counter, valueCounter, betsData } = useSelector(
     (store) => store.betsSlice
   );

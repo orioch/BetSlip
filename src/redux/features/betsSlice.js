@@ -42,9 +42,19 @@ const betsSlice = createSlice({
     changeValue: (state, action) => {
       state.valueCounter = Number(action.payload);
     },
+    deletePackage: (state) => {
+      state.betsData = {};
+      state.counter = 0;
+      state.valueCounter = 0;
+    },
   },
 });
 
-export const { addBet, removeBet, openCloseBetslip, changeValue } =
-  betsSlice.actions;
+export const {
+  addBet,
+  removeBet,
+  openCloseBetslip,
+  changeValue,
+  deletePackage,
+} = betsSlice.actions;
 export default betsSlice.reducer;

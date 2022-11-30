@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { changeValue } from "../../redux/features/betsSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { changeValue, deletePackage } from "../../redux/features/betsSlice";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 export default function InputFiled(handleFunction) {
   const dispatch = useDispatch();
   const { valueCounter } = useSelector((store) => store.betsSlice);
@@ -23,7 +23,7 @@ export default function InputFiled(handleFunction) {
     }
   };
   return (
-    <div className="content-row">
+    <div className="content-row input-filed">
       <RemoveCircleIcon
         onClick={() => dispatch(changeValue(Number(valueCounter) - 1))}
         style={{ color: "black" }}
@@ -32,6 +32,11 @@ export default function InputFiled(handleFunction) {
       <AddCircleIcon
         onClick={() => dispatch(changeValue(Number(valueCounter) + 1))}
         style={{ color: "black" }}
+      />
+      <RiDeleteBin6Fill
+        onClick={() => dispatch(deletePackage())}
+        size={30}
+        className="delete-icon"
       />
     </div>
   );

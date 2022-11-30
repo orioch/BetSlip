@@ -156,6 +156,9 @@
   display: inline-block;
 }
 
+.content-row.input-filed {
+  margin-top: 25px;
+}
 input {
   height: 20px;
   width: 50px;
@@ -174,4 +177,11 @@ input {
   text-align: center;
 
   color: #000000;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #7a7a7a;
+  margin-left: auto;
+  margin-bottom: 60px;
 }
