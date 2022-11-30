@@ -1,0 +1,83 @@
+.market-selection {
+  width: 428px;
+  height: 671px;
+  background: #ffffff;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.market-accordion {
+  width: 412px;
+}
+
+.market-accordion .content {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  padding: 0 0 13px 0;
+}
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.market-item {
+  cursor: pointer;
+  height: 57px;
+  background: #fdf1f1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 3px 0 3px 0;
+}
+
+.market-item h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  margin: 0;
+  color: #000000;
+}
+.market-item p {
+  color: #ff0022;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.market-item.active {
+  background-color: #ff0022;
+}
+.market-item.active h1 {
+  color: white;
+}
+.market-item.active p {
+  color: white;
+}
