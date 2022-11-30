@@ -1,4 +1,30 @@
 .betslip {
   position: fixed;
   bottom: 0;
+  background: #333333;
+  height: 62.46px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 22px 0 22px;
+}
+
+.betslip .counter {
+  background-color: #1eb500;
+  height: 31.230777740478516px;
+  width: 29.0000057220459px;
+
+  border-radius: 50%;
+  line-height: 31.230777740478516px;
+  text-align: center;
+
+  vertical-align: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #ffffff;
 }
