@@ -38,6 +38,7 @@ export default function MarketSelection() {
         { bet: "Player 12", value: "+1100" },
       ],
       itemsInRow: 2,
+      isMultiselect: true,
     },
   ];
   return (
