@@ -34,6 +34,7 @@ h1 {
 }
 
 .market-item {
+  cursor: pointer;
   height: 57px;
   background: #fdf1f1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -59,6 +60,7 @@ h1 {
   color: #000000;
 }
 .market-item p {
+  color: #ff0022;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -68,5 +70,14 @@ h1 {
   align-items: center;
   text-align: center;
   margin: 0;
-  color: #ff0022;
+}
+
+.market-item.active {
+  background-color: #ff0022;
+}
+.market-item.active h1 {
+  color: white;
+}
+.market-item.active p {
+  color: white;
 }
