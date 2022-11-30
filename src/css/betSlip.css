@@ -195,6 +195,8 @@ input {
 .delete-icon {
   cursor: pointer;
   color: #7a7a7a;
+}
+.content .delete-icon {
   position: absolute;
   right: 10px;
   top: 60px;
@@ -205,7 +207,11 @@ input {
   width: calc(100vw - 43px);
   gap: 0;
 }
-.single {
+.single-container {
+  display: flex;
+  flex-direction: row;
+}
+.single-container {
   padding: 9px 0 8px 0;
   border-bottom: solid 1px black;
 }
@@ -225,4 +231,10 @@ h2 {
 .single h1 {
   font-size: 12px;
   font-weight: bolder;
+}
+
+.single-container .delete-icon {
+  position: static;
+
+  /* margin: 10px 0 0 0; */
 }
