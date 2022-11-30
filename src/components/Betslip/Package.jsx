@@ -16,7 +16,7 @@ import { deletePackage } from "../../redux/features/betsSlice";
 
 export default function Package() {
   const dispatch = useDispatch();
-  const { counter, valueCounter, betsData } = useSelector(
+  const { counter, valueCounter, betsData, team1, team2 } = useSelector(
     (store) => store.betsSlice
   );
 
@@ -41,7 +41,9 @@ export default function Package() {
           className="content-row"
           style={{ justifyContent: "space-between" }}
         >
-          <h1>Team 1 vs Team 2</h1>
+          <h1>
+            {team1} vs {team2}
+          </h1>
           <h1>
             {" "}
             {valueCounter > 0 ? "+" : ""}

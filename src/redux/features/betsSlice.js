@@ -5,6 +5,8 @@ const initialState = {
   counter: 0,
   valueCounter: 0,
   isWindowOpen: false,
+  team1: "Team 1",
+  team2: "Team 2",
 };
 
 const betsSlice = createSlice({
