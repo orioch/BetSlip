@@ -34,7 +34,7 @@ h1 {
   color: #000000;
 }
 
-.market-item {
+.bet-item {
   cursor: pointer;
   height: 57px;
   background: #fdf1f1;
@@ -47,7 +47,7 @@ h1 {
   margin: 3px 0 3px 0;
 }
 
-.market-item h1 {
+.bet-item h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -60,7 +60,7 @@ h1 {
   margin: 0;
   color: #000000;
 }
-.market-item p {
+.bet-item p {
   color: #ff0022;
   font-family: "Inter";
   font-style: normal;
@@ -73,12 +73,12 @@ h1 {
   margin: 0;
 }
 
-.market-item.active {
+.bet-item.active {
   background-color: #ff0022;
 }
-.market-item.active h1 {
+.bet-item.active h1 {
   color: white;
 }
-.market-item.active p {
+.bet-item.active p {
   color: white;
 }

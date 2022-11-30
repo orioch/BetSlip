@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function MarketItem({ width, bet, value }) {
+export default function BetItem({ width, bet, value }) {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -9,7 +9,7 @@ export default function MarketItem({ width, bet, value }) {
   return (
     <div
       onClick={handleClick}
-      className={active ? "market-item active" : "market-item"}
+      className={active ? "bet-item active" : "bet-item"}
       style={{ width: width }}
     >
       <h1>{bet}</h1>
