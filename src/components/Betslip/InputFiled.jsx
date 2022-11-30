@@ -3,7 +3,8 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import { useSelector, useDispatch } from "react-redux";
 import { changeValue, deletePackage } from "../../redux/features/betsSlice";
-export default function InputFiled(handleFunction) {
+
+export default function InputFiled() {
   const dispatch = useDispatch();
   const { valueCounter } = useSelector((store) => store.betsSlice);
   const [textValue, setTextValue] = useState(valueCounter);
