@@ -195,8 +195,9 @@ input {
 .delete-icon {
   cursor: pointer;
   color: #7a7a7a;
-  margin-left: auto;
-  margin-bottom: 60px;
+  position: absolute;
+  right: 10px;
+  top: 60px;
 }
 .singles-content {
   margin: -10px 0 0 -15px;

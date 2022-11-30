@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { combineArrays } from "../../utils/utilitis";
 import PackageBetsList from "./PackageBetsList";
 import InputFiled from "./InputFiled";
-
+import { RiDeleteBin6Fill } from "react-icons/ri";
 import { deletePackage } from "../../redux/features/betsSlice";
 
 export default function Package() {
@@ -33,6 +33,11 @@ export default function Package() {
         </Typography>
       </AccordionSummary>
       <AccordionDetails className="content">
+        <RiDeleteBin6Fill
+          onClick={() => dispatch(deletePackage())}
+          size={30}
+          className="delete-icon"
+        />
         <div className="content-row">
           <img className="cta-img" src={ctaImg} />
           <span>{counter} selections</span>
