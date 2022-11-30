@@ -11,74 +11,90 @@
 }
 
 .market-accordion {
-  width: 412px;
+  width: 100%;
 }
 
-.market-accordion .content {
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: space-around;
-  padding: 0 0 13px 0;
+.market-accordion .accordion-title {
+  padding: 0;
+  background: #a60000;
+  flex-direction: row-reverse;
 }
-h1 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+
+/* MuiSvgIcon-root override the default css of mui icon */
+.MuiSvgIcon-root {
+  color: #ffffff;
+
+  margin: 0 8px 0 8px;
+}
+.accordion-title h1 {
   display: flex;
   align-items: center;
   text-align: center;
 
-  color: #000000;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.cta-img {
+  margin-left: auto;
+  padding-right: 10px;
+}
+.market-accordion .content {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 15px 10px 15px;
+  gap: 10px;
+}
+
+.market-accordion .content.row {
+  flex-direction: row;
 }
 
 .bet-item {
+  width: auto;
   cursor: pointer;
   height: 57px;
-  background: #fdf1f1;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  background: #d1d1d1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  margin: 3px 0 3px 0;
-}
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
 
-.bet-item h1 {
-  font-family: "Inter";
+  font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
 
-  margin: 0;
   color: #000000;
 }
-.bet-item p {
-  color: #ff0022;
-  font-family: "Inter";
+
+.content.row .bet-item {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+
+  font-family: "Arial";
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  display: flex;
-  align-items: center;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 12px;
   text-align: center;
-  margin: 0;
 }
 
+.bet-item p {
+  margin: 0;
+}
 .bet-item.active {
-  background-color: #ff0022;
-}
-.bet-item.active h1 {
-  color: white;
-}
-.bet-item.active p {
-  color: white;
+  background-color: #e4ab12;
 }

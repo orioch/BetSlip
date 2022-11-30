@@ -11,7 +11,7 @@ export default function MarketSelection() {
         { bet: "Draw", value: "+200" },
         { bet: "Team 2", value: "+235" },
       ],
-      itemsInRow: 3,
+      displayInOneRow: true,
     },
     {
       title: "BOTH TEAMS TO SCORE",
@@ -19,7 +19,7 @@ export default function MarketSelection() {
         { bet: "Yes", value: "-110" },
         { bet: "No", value: "-120" },
       ],
-      itemsInRow: 2,
+      displayInOneRow: false,
     },
     {
       title: "ANY TIME GOALSCORER",
@@ -37,7 +37,7 @@ export default function MarketSelection() {
         { bet: "Player 11", value: "+1000" },
         { bet: "Player 12", value: "+1100" },
       ],
-      itemsInRow: 2,
+      displayInOneRow: false,
       isMultiselect: true,
     },
   ];
