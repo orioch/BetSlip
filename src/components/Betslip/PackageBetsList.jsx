@@ -15,8 +15,10 @@ export default function PackageBetsList({ array }) {
             className="step-img"
             src={step}
           />
-          <span className="bet-title">{bet.title}</span>
-          <span className="bet-selection">{bet.bet}</span>
+          <div className="column">
+            <span className="bet-selection">{bet.bet}</span>
+            <span className="bet-title">{bet.title}</span>
+          </div>
         </div>
       );
     return (
@@ -28,8 +30,10 @@ export default function PackageBetsList({ array }) {
             className="step-img"
             src={step}
           />
-          <span className="bet-title">{bet.title}</span>
-          <span className="bet-selection">{bet.bet}</span>
+          <div className="column">
+            <span className="bet-selection">{bet.bet}</span>
+            <span className="bet-title">{bet.title}</span>
+          </div>
         </div>
         <img className="line-img" src={line} />
       </React.Fragment>

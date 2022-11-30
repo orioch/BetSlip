@@ -124,11 +124,21 @@
 
   color: #999999;
 }
-.content-row span.bet-title {
+
+.betslip-page .column {
   margin: 0 10px 0 10px;
+  height: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content-row span.bet-selection {
+  font-size: 14px;
   color: black;
 }
-.content-row span.bet-selection {
+.content-row span.bet-title {
+  font-size: 10px;
   margin: 0;
   color: #999999;
 }
@@ -146,13 +156,14 @@
 }
 
 .betslip-page .step-img {
+  cursor: pointer;
   padding: 0 0 0 6px;
   margin: 0;
   display: inline-block;
 }
 .betslip-page .line-img {
   padding: 0;
-  margin: -10px 0 -10px 15px;
+  margin: -5px 0 -5px 15px;
   display: inline-block;
 }
 
