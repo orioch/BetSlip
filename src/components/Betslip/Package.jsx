@@ -50,6 +50,7 @@ export default function Package() {
         {/*  */}
         <PackageBetsList array={combineArrays(betsData)} />
         <InputFiled />
+        <div className="orange-square">Lorem ipsum dolor sit amet.</div>
       </AccordionDetails>
     </Accordion>
   );
