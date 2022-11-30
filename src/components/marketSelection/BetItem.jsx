@@ -32,7 +32,6 @@ export default function BetItem({ width, title, bet, value, isMultiselect }) {
     <div
       onClick={handleClick}
       className={active ? "bet-item active" : "bet-item"}
-      style={{ width: width }}
     >
       <p>{bet}</p>
       <p>{value}</p>
