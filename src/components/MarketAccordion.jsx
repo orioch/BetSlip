@@ -7,7 +7,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
 import BetItem from "./marketSelection/BetItem";
-
+import ctaImg from "../media/cta.svg";
 export default function MarketAccordion({
   title,
   itemsInRow,
@@ -25,10 +25,12 @@ export default function MarketAccordion({
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
+        className="accordion-title"
       >
         <Typography>
           <h1>{title}</h1>
         </Typography>
+        <img className="cta-img" src={ctaImg} />
       </AccordionSummary>
       <AccordionDetails className="content">
         {itemsArray.map((item) => (

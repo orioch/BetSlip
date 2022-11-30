@@ -11,27 +11,45 @@
 }
 
 .market-accordion {
-  width: 412px;
+  width: 100%;
 }
 
+.market-accordion .accordion-title {
+  padding: 0;
+  background: #a60000;
+  flex-direction: row-reverse;
+}
+
+/* MuiSvgIcon-root override the default css of mui icon */
+.MuiSvgIcon-root {
+  color: #ffffff;
+
+  margin: 0 8px 0 8px;
+}
+.accordion-title h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.cta-img {
+  margin-left: auto;
+  padding-right: 10px;
+}
 .market-accordion .content {
   display: flex;
   flex-wrap: wrap;
 
   justify-content: space-around;
   padding: 0 0 13px 0;
-}
-h1 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
 }
 
 .bet-item {
