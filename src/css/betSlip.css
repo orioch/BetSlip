@@ -1,4 +1,4 @@
-.betslip {
+.betslip-bar {
   position: fixed;
   bottom: 0;
   background: #333333;
@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.betslip .counter {
+.betslip-bar .counter {
   background-color: #1eb500;
   height: 31.230777740478516px;
   min-width: 29.0000057220459px;
@@ -29,7 +29,7 @@
   color: #ffffff;
 }
 
-.betslip .counter.value {
+.betslip-bar .counter.value {
   min-width: 64px;
   margin-left: auto;
   margin-right: 22px;
@@ -37,7 +37,7 @@
 
   padding: 3.23px 12.69px 4.31px 13px;
 }
-.betslip h1 {
+.betslip-bar h1 {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 500;

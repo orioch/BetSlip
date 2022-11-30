@@ -1,5 +1,4 @@
 import React from "react";
-import BetSlip from "../components/Betslip/BetSlip";
 import MarketAccordion from "../components/MarketAccordion";
 import "../css/marketSelection.css";
 
