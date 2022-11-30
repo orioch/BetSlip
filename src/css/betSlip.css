@@ -50,14 +50,17 @@
 
 .betslip-page {
   position: fixed;
-  left: 43px;
+  left: 100vw;
   bottom: 62.46px;
   height: 100%;
   width: 100%;
   background: #ffffff;
-  transition: left 1s;
+  border: 1px solid;
+  border-color: #00000000;
+  transition: left 1s, border-color 1s;
 }
 
 .betslip-page.open {
-  left: 100vw;
+  border-color: #000000;
+  left: 43px;
 }

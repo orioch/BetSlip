@@ -11,7 +11,7 @@ function App() {
     <React.Fragment>
       <MarketSelection />
       <BetSlipBar />
-      <div className={`overlay ${isWindowOpen}`}></div>
+      <div className={`overlay ${!isWindowOpen}`}></div>
       <BetslipPage />
     </React.Fragment>
   );
