@@ -6,11 +6,11 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ctaImg from "../../media/redCta.svg";
-import step from "../../media/step.svg";
-import line from "../../media/Line.svg";
 import React from "react";
 import { useSelector } from "react-redux";
 import { combineArrays } from "../../utils/utilitis";
+import PackageBetsList from "./PackageBetsList";
+import InputFiled from "./InputFiled";
 
 export default function Package() {
   const { counter, valueCounter, betsData } = useSelector(
@@ -48,27 +48,8 @@ export default function Package() {
         {}
 
         {/*  */}
-        {combineArrays(betsData).map((bet, index) => {
-          if (index == combineArrays(betsData).length - 1)
-            return (
-              <div className="content-row">
-                <img className="step-img" src={step} />
-                <span className="bet-title">{bet.title}</span>
-                <span className="bet-selection">{bet.bet}</span>
-              </div>
-            );
-          return (
-            <React.Fragment>
-              {" "}
-              <div className="content-row">
-                <img className="step-img" src={step} />
-                <span className="bet-title">{bet.title}</span>
-                <span className="bet-selection">{bet.bet}</span>
-              </div>
-              <img className="line-img" src={line} />
-            </React.Fragment>
-          );
-        })}
+        <PackageBetsList array={combineArrays(betsData)} />
+        <InputFiled />
       </AccordionDetails>
     </Accordion>
   );

@@ -39,8 +39,12 @@ const betsSlice = createSlice({
       const index = state.betsData[title].findIndex((item) => item.bet == bet);
       state.betsData[title].splice(index, 1);
     },
+    changeValue: (state, action) => {
+      state.valueCounter = Number(action.payload);
+    },
   },
 });
 
-export const { addBet, removeBet, openCloseBetslip } = betsSlice.actions;
+export const { addBet, removeBet, openCloseBetslip, changeValue } =
+  betsSlice.actions;
 export default betsSlice.reducer;
