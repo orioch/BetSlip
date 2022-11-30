@@ -49,18 +49,39 @@
 }
 
 .betslip-page {
+  overflow: scroll;
   position: fixed;
   left: 100vw;
   bottom: 62.46px;
-  height: 100%;
-  width: 100%;
+  height: calc(100% - 62.46px);
+  width: calc(100vw - 43px);
   background: #ffffff;
   border: 1px solid;
   border-color: #00000000;
   transition: left 1s, border-color 1s;
+  display: flex;
+  flex-direction: column;
 }
 
 .betslip-page.open {
   border-color: #000000;
   left: 43px;
+}
+
+.betslip-page .title {
+  height: 46px;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
 }
