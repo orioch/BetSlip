@@ -12,10 +12,8 @@ export default function BetslipPage() {
   const dispatch = useDispatch();
   const sendData = () => {
     console.log({ package: betsData, singles });
-    dispatch(openCloseBetslip());
-    setTimeout(() => {
-      dispatch(deletePackage());
-    }, 400);
+
+    dispatch(deletePackage());
   };
   return (
     <div className={isWindowOpen ? "betslip-page open" : "betslip-page"}>

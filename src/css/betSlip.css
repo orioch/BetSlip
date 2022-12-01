@@ -1,7 +1,7 @@
 .betslip-bar {
   cursor: pointer;
   position: fixed;
-  bottom: 0;
+  bottom: -10px;
   background: #333333;
   height: 62.46px;
   width: 100%;
@@ -9,6 +9,10 @@
   gap: 10px;
   justify-content: flex-start;
   align-items: center;
+  transition: bottom 1s;
+}
+.betslip-bar.display {
+  bottom: var(--footer-height);
 }
 
 .betslip-bar .counter {
@@ -62,8 +66,8 @@
   overflow-x: hidden;
   position: fixed;
   left: 100vw;
-  bottom: 62.46px;
-  height: calc(100% - 62.46px);
+  bottom: var(--full-footer-height);
+  height: calc(100vh - var(--full-footer-height));
   width: calc(100vw - 43px);
   background: #ffffff;
   border: 1px solid;
