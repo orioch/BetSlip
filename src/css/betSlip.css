@@ -29,11 +29,20 @@
 
   color: #ffffff;
 }
-
+.betslip-bar .arrow {
+  margin-right: 30px;
+  transition: all 0.2s;
+}
+.betslip-bar .arrow.left {
+  transform: rotate(0deg);
+}
+.betslip-bar .arrow.right {
+  transform: rotate(180deg);
+}
 .betslip-bar .counter.value {
   min-width: 64px;
   margin-left: auto;
-  margin-right: 22px;
+
   border-radius: 80px 80px;
 
   padding: 3.23px 12.69px 4.31px 13px;
@@ -68,21 +77,35 @@
   border-color: #000000;
   left: 43px;
 }
-
+/* we need this container because mui's accordion changing the height of other elements */
+.betslip-page .title-container {
+  height: 46px;
+}
 .betslip-page .title {
+  cursor: pointer;
   height: 46px;
   background: #ffffff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+.title-icon {
+  color: #a60000;
+}
+.betslip-page .title-icon {
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
 
+.betslip-page.open .title-icon {
+  transform: rotate(180deg);
+}
 .title h1 {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
 }
@@ -98,6 +121,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: #ffffff;
 }
 
 .betslip-page .content-row {
@@ -171,6 +195,9 @@
 .content-row.input-filed {
   margin-top: 25px;
 }
+.single .input-filed {
+  margin-bottom: 10px;
+}
 input {
   height: 20px;
   width: 50px;
@@ -191,7 +218,9 @@ input {
 
   color: #000000;
 }
-
+.single .orange-square {
+  width: calc(100vw - 43px);
+}
 .delete-icon {
   cursor: pointer;
   color: #7a7a7a;
@@ -202,18 +231,22 @@ input {
   top: 60px;
 }
 .singles-content {
-  margin: -10px 0 0 -15px;
-  padding: 0;
+  background-color: #ffffff;
+  margin: 0 0 0 0;
+  padding: 0 !important;
+
   width: calc(100vw - 43px);
   gap: 0;
 }
-.single-container {
-  display: flex;
-  flex-direction: row;
-}
-.single-container {
+.full-single-container {
   padding: 9px 0 8px 0;
   border-bottom: solid 1px black;
+}
+.single-top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .single h1,
 h2 {
@@ -234,7 +267,113 @@ h2 {
 }
 
 .single-container .delete-icon {
-  position: static;
+  /* position: static; */
+  margin: 0 0 0 50px;
+}
+.right-column {
+  margin-right: 10px;
+}
+.right-column h1 {
+  margin: 7px 0 0 0;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  /* identical to box height */
 
-  /* margin: 10px 0 0 0; */
+  color: #000000;
+}
+.summary {
+  min-height: 63px;
+  height: fit-content;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summary .total {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.summary .win {
+  min-height: 48px;
+  height: fit-content;
+  width: 131px;
+  line-height: 48px;
+  overflow: scroll;
+  background: #e4ab12;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: center;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.checkbox-container {
+  margin: 10px 0 0 10px;
+  display: flex;
+
+  align-items: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.checkbox-container input {
+  width: 15px;
+  margin-right: 10px;
+}
+
+/* we need this container because mui's accordion changing the height of other elements */
+.btn-container {
+  height: 60px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 10px 0;
+}
+.submit-btn {
+  cursor: pointer;
+  height: 44px;
+  width: 80%;
+  border: none;
+
+  background: #11b502;
+  border-radius: 5px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.plus-minus-btn {
+  cursor: pointer;
+  color: black;
 }

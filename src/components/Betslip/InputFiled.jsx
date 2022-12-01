@@ -26,12 +26,12 @@ export default function InputFiled() {
     <div className="content-row input-filed">
       <RemoveCircleIcon
         onClick={() => dispatch(changeValue(Number(valueCounter) - 1))}
-        style={{ color: "black" }}
+        className="plus-minus-btn"
       />
       <input value={textValue} onChange={handleTextChange} />
       <AddCircleIcon
         onClick={() => dispatch(changeValue(Number(valueCounter) + 1))}
-        style={{ color: "black" }}
+        className="plus-minus-btn"
       />
     </div>
   );

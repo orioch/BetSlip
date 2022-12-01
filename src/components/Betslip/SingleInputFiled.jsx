@@ -65,12 +65,12 @@ export default function SingleInputFiled({ bet }) {
     <div className="content-row input-filed">
       <RemoveCircleIcon
         onClick={() => handleTextChange("-1")}
-        style={{ color: "black" }}
+        className="plus-minus-btn"
       />
       <input value={textValue} onChange={handleTextChange} />
       <AddCircleIcon
         onClick={() => handleTextChange("+1")}
-        style={{ color: "black" }}
+        className="plus-minus-btn"
       />
     </div>
   );

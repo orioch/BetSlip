@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import betsSlice from "../../redux/features/betsSlice";
 import { combineArrays } from "../../utils/utilitis";
 import Single from "./Single";
+import Summary from "./Summary";
 export default function Singles() {
   const { betsData } = useSelector((store) => store.betsSlice);
   const [singles, setSingles] = useState(combineArrays(betsData));
@@ -33,10 +34,13 @@ export default function Singles() {
       </AccordionSummary>
       <AccordionDetails className="singles-content">
         {singles.length == 0 ? (
-          <div className="content-row">No Bets Selected</div>
+          <div className="content-row" style={{ padding: "20px" }}>
+            No Bets Selected
+          </div>
         ) : (
           singles.map((bet, index) => <Single key={bet.bet} bet={bet} />)
         )}
+        <Summary />
       </AccordionDetails>
     </Accordion>
   );
