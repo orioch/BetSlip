@@ -5,12 +5,13 @@ import BetSlipBar from "./components/Betslip/BetSlipBar";
 import BetslipPage from "./pages/BetslipPage";
 import { useSelector, useDispatch } from "react-redux";
 import { openCloseBetslip } from "./redux/features/betsSlice";
-
+import header from "./media/Header.svg";
 function App() {
   const dispatch = useDispatch();
   const { isWindowOpen } = useSelector((store) => store.betsSlice);
   return (
     <React.Fragment>
+      <img style={{ width: "100vw" }} src={header} />
       <MarketSelection />
       <BetSlipBar />
       <div
