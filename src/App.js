@@ -1,6 +1,6 @@
 import MarketSelection from "./pages/MarketSelection";
 import "./css/app.css";
-import React from "react";
+import React, { useEffect } from "react";
 import BetSlipBar from "./components/Betslip/BetSlipBar";
 import BetslipPage from "./pages/BetslipPage";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,6 +11,17 @@ import stickyFooter from "./media/stickyFooter.svg";
 function App() {
   const dispatch = useDispatch();
   const { isWindowOpen, counter } = useSelector((store) => store.betsSlice);
+
+  useEffect(() => {
+    if (isWindowOpen) {
+      document.body.classList.remove("enable-scroll");
+      document.body.classList.add("disable-scroll");
+    } else {
+      document.body.classList.remove("disable-scroll");
+      document.body.classList.add("enable-scroll");
+    }
+  }, [isWindowOpen]);
+
   return (
     <React.Fragment>
       <img className="header" src={header} />

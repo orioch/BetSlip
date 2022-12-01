@@ -4,6 +4,13 @@
   --full-footer-height: calc(13.551401869159vw + 62.46px);
 }
 
+body.disable-scroll {
+  overflow: hidden;
+}
+
+body.enable-scroll {
+  overflow: scroll;
+}
 .app {
   background-color: aquamarine;
   width: 100vw;
