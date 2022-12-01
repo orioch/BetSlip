@@ -1,12 +1,22 @@
+import { Checkbox, FormControlLabel, Typography } from "@mui/material";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Package from "../components/Betslip/Package";
 import Singles from "../components/Betslip/Singles";
-import Summary from "../components/Betslip/Summary";
+import { deletePackage, openCloseBetslip } from "../redux/features/betsSlice";
 
 export default function BetslipPage() {
-  const { isWindowOpen } = useSelector((store) => store.betsSlice);
-
+  const { isWindowOpen, betsData, singles } = useSelector(
+    (store) => store.betsSlice
+  );
+  const dispatch = useDispatch();
+  const sendData = () => {
+    console.log({ package: betsData, singles });
+    dispatch(openCloseBetslip());
+    setTimeout(() => {
+      dispatch(deletePackage());
+    }, 400);
+  };
   return (
     <div className={isWindowOpen ? "betslip-page open" : "betslip-page"}>
       <div className="title">
@@ -14,7 +24,22 @@ export default function BetslipPage() {
       </div>
       <Package />
       <Singles />
-      <Summary />
+      <div className="checkbox-container">
+        <input type="checkbox" name="checkbox1" id="checkbox1" />
+        <label htmlFor="checkbox1">Lorem ipsum dolor sit.</label>
+      </div>
+      <div className="checkbox-container">
+        <input type="checkbox" name="checkbox2" id="checkbox2" />
+        <label htmlFor="checkbox2">
+          Lorem ipsum dolor sit amet consectetur
+        </label>
+      </div>
+      <div className="btn-container">
+        <button onClick={sendData} className="submit-btn">
+          {" "}
+          Place Bets
+        </button>
+      </div>
     </div>
   );
 }

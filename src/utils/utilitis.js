@@ -6,3 +6,12 @@ export const combineArrays = (obj) => {
   }
   return result;
 };
+
+// this function "calculate" how much you win from your singles (just for examle... in real life the backend should do this)
+export const calculateSinglesWin = (singles) => {
+  let value = singles.reduce(
+    (currentValue, bet) => bet.value + currentValue,
+    0
+  );
+  return Number(value) * 4;
+};

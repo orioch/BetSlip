@@ -98,6 +98,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: #ffffff;
 }
 
 .betslip-page .content-row {
@@ -202,6 +203,7 @@ input {
   top: 60px;
 }
 .singles-content {
+  background-color: #ffffff;
   margin: 0 0 0 0;
   padding: 0 !important;
 
@@ -237,4 +239,87 @@ h2 {
   position: static;
 
   /* margin: 10px 0 0 0; */
+}
+
+.summary {
+  height: 63px;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summary .total {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.summary .win {
+  height: 48px;
+  width: 131px;
+  line-height: 48px;
+
+  background: #e4ab12;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: center;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.checkbox-container {
+  margin: 10px 0 0 10px;
+  display: flex;
+
+  align-items: center;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.checkbox-container input {
+  width: 15px;
+  margin-right: 10px;
+}
+.btn-container {
+  height: 201px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+.submit-btn {
+  cursor: pointer;
+  height: 44px;
+  width: 80%;
+  border: none;
+
+  background: #11b502;
+  border-radius: 5px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #ffffff;
 }

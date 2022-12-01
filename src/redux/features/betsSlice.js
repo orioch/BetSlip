@@ -55,6 +55,7 @@ const betsSlice = createSlice({
       state.betsData = {};
       state.counter = 0;
       state.valueCounter = 0;
+      state.singles = [];
     },
     // addSingle check if the single already exsist, and if it is - only change the value. else - create a new single
     addSingle: (state, action) => {
