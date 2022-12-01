@@ -7,6 +7,21 @@
   justify-content: space-around;
   /* overflow: scroll; */
 }
+
+.header,
+.footer {
+  width: 100vw;
+  /* user-drag: none; */
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.footer {
+  margin-bottom: 62.46px;
+}
+
 .overlay {
   position: fixed;
   width: 100vw;
