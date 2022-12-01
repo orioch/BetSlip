@@ -8,6 +8,7 @@ import { openCloseBetslip } from "./redux/features/betsSlice";
 import header from "./media/Header.svg";
 import footer from "./media/footer.svg";
 import stickyFooter from "./media/stickyFooter.svg";
+import MarketHeader from "./components/marketSelection/MarketHeader";
 function App() {
   const dispatch = useDispatch();
   const { isWindowOpen, counter } = useSelector((store) => store.betsSlice);
@@ -25,6 +26,7 @@ function App() {
   return (
     <React.Fragment>
       <img className="header" src={header} />
+      <MarketHeader />
       <MarketSelection />
       <div
         onClick={() => dispatch(openCloseBetslip())}
