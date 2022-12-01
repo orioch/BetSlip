@@ -34,6 +34,7 @@ export default function MarketAccordion({
       <AccordionDetails className={displayInOneRow ? "content row" : "content"}>
         {itemsArray.map((item) => (
           <BetItem
+            key={item.title + item.bet + item.value}
             bet={item.bet}
             value={item.value}
             isMultiselect={isMultiselect}
