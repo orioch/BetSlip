@@ -38,8 +38,29 @@ You can see a live demo of the project in [oriochayon.com/betslip](https://orioc
 <!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
 
 ## Features
+### states and redux
+the states in this project are managed in 2 different ways - redux, and useState. 
 
-<!-- TODO: List what specific 'user problems' that this application solves. -->
+#### important states in redux:
+ *  **betsData** - this object contains all the bets in the package. the properties names are the titles of the bets (Moneyline, any team to score, etc.) and the value of each property is an array of bets.
+ *  **singles** - this array contains all the single bets. when we call the reducer "removeBets" it removes it from betsData and from singles as well.
+ *   **counter** - count how many bets exist in the package. although we don't necceserely need this state (we can use count how many bets there are using betsData), it makes the code much cleaner.
+ *   **valueCounter** - the sum of all the bets' values
+ *   **isWindowOpen** - a boolean state. true displays the slipbet window, while false hiding it.
+
+#### reducers in redux:
+ * **addBet** - add a new bet to betsData. also affects the counter state.
+ * **removeBet** - remove the bet that equal action.payload from betsData and from singles as well. also affects the counter state.
+ * **changeValue** - change the valueCounter state according to action.payload.
+ * **deletePackage** - basically reset all the states to default. we use it also when the submit button clicked
+ * **addSingle** - add single to singles. if the single already exists - just change its value.
+
+#### states in useState:
+ * **displayBar** - a boolean state. true displays the slipbetBar, while false hiding it.
+ * **textValue** - on input filed components - before the value affects betsData or singles, we keep it in a local state until the input will be a valid number.
+ * **singles** - the state "singles" in Singles.jsx, unlike the state singles in the redux store - have all the bets that exist in betsData. we have this state only for displaying the unready singles in the bet slip.
+ * **active** - a boolean state. true when the item is selected, false when not.
+
 
 ## Contact
 
