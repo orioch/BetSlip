@@ -9,7 +9,7 @@ import header from "./media/Header.svg";
 import footer from "./media/footer.svg";
 function App() {
   const dispatch = useDispatch();
-  const { isWindowOpen } = useSelector((store) => store.betsSlice);
+  const { isWindowOpen, counter } = useSelector((store) => store.betsSlice);
   return (
     <React.Fragment>
       <img className="header" src={header} />
@@ -19,7 +19,10 @@ function App() {
         onClick={() => dispatch(openCloseBetslip())}
         className={`overlay ${!isWindowOpen}`}
       ></div>
-      <img className="footer" src={footer} />
+      <img
+        className={counter == 0 ? "footer" : "footer marg-up"}
+        src={footer}
+      />
       <BetslipPage />
     </React.Fragment>
   );

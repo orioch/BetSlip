@@ -19,6 +19,10 @@
   -ms-user-select: none;
 }
 .footer {
+  margin-bottom: 0;
+  transition: margin 1s;
+}
+.footer.marg-up {
   margin-bottom: 62.46px;
 }
 
