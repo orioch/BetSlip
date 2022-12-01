@@ -1,3 +1,9 @@
+:root {
+  --footer-height: 13.551401869159vw;
+  --slipbar-height: 62.46px;
+  --full-footer-height: calc(13.551401869159vw + 62.46px);
+}
+
 .app {
   background-color: aquamarine;
   width: 100vw;
@@ -20,11 +26,11 @@
   -ms-user-select: none;
 }
 .footer {
-  margin-bottom: 62.3px;
+  margin-bottom: var(--footer-height);
   transition: margin 1s;
 }
 .footer.marg-up {
-  margin-bottom: 124.76px;
+  margin-bottom: var(--full-footer-height);
 }
 
 .sticky-footer {

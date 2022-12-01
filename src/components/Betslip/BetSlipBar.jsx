@@ -28,7 +28,9 @@ export default function BetSlipBar() {
   return (
     <div
       className={displayBar ? "betslip-bar display" : "betslip-bar"}
-      onClick={() => dispatch(openCloseBetslip())}
+      onClick={() => {
+        if (counter > 0) dispatch(openCloseBetslip());
+      }}
     >
       <SlipCounter />
       <h1>Bet Slip</h1>
