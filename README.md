@@ -15,6 +15,8 @@
 
 This project is a “Betslip” - a small feature that exists in a Sportbook. the project doesn't have a backend, so we log the selected bets on the console after submit. the header and the footer of the site are not implemented, the only features in this project is the market selector and the betslip.
 
+this project is not powered by any api, instead we have the array "data" in MarketSelection.jsx
+
 <img src="https://github.com/orioch/BetSlip/blob/26-take-care-of-warnings-and-finishing-everything/screenshots/Screen%20Shot%202022-12-01%20at%2013.32.54.png?raw=true" width=20% height=20%>      <img src="https://github.com/orioch/BetSlip/blob/26-take-care-of-warnings-and-finishing-everything/screenshots/Screen%20Shot%202022-12-01%20at%2013.33.16.png?raw=true" width=20% height=20%>      <img src="https://github.com/orioch/BetSlip/blob/26-take-care-of-warnings-and-finishing-everything/screenshots/Screen%20Shot%202022-12-01%20at%2013.33.37.png?raw=true" width=20% height=20%> 
 
 ## Live Demo
