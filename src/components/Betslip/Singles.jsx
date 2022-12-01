@@ -34,7 +34,9 @@ export default function Singles() {
       </AccordionSummary>
       <AccordionDetails className="singles-content">
         {singles.length == 0 ? (
-          <div className="content-row">No Bets Selected</div>
+          <div className="content-row" style={{ padding: "20px" }}>
+            No Bets Selected
+          </div>
         ) : (
           singles.map((bet, index) => <Single key={bet.bet} bet={bet} />)
         )}
