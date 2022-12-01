@@ -1,7 +1,5 @@
 # BetSlip
 
-(I'm still working on creating this project, but you can access what I have made so far, and also look at the next [work items](https://github.com/orioch/BetSlip/issues) i am planning to do.)
-
 ## Table of Contents
 
 - [Overview](#overview)
