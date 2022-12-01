@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { openCloseBetslip } from "./redux/features/betsSlice";
 import header from "./media/Header.svg";
 import footer from "./media/footer.svg";
+import stickyFooter from "./media/stickyFooter.svg";
 function App() {
   const dispatch = useDispatch();
   const { isWindowOpen, counter } = useSelector((store) => store.betsSlice);
@@ -14,11 +15,12 @@ function App() {
     <React.Fragment>
       <img className="header" src={header} />
       <MarketSelection />
-      <BetSlipBar />
       <div
         onClick={() => dispatch(openCloseBetslip())}
         className={`overlay ${!isWindowOpen}`}
       ></div>
+      <BetSlipBar />
+      <img className="sticky-footer" src={stickyFooter} />
       <img
         className={counter == 0 ? "footer" : "footer marg-up"}
         src={footer}

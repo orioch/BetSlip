@@ -9,7 +9,8 @@
 }
 
 .header,
-.footer {
+.footer,
+.sticky-footer {
   width: 100vw;
   /* user-drag: none; */
   -webkit-user-drag: none;
@@ -19,11 +20,16 @@
   -ms-user-select: none;
 }
 .footer {
-  margin-bottom: 0;
+  margin-bottom: 62.3px;
   transition: margin 1s;
 }
 .footer.marg-up {
-  margin-bottom: 62.46px;
+  margin-bottom: 124.76px;
+}
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0px;
 }
 
 .overlay {

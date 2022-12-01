@@ -14,8 +14,14 @@ export default function BetSlipBar() {
   useEffect(() => {
     if (counter > 0) setDisplayBar(true);
     else {
-      setDisplayBar(false);
-      if (isWindowOpen) dispatch(openCloseBetslip());
+      if (isWindowOpen) {
+        dispatch(openCloseBetslip());
+        setTimeout(() => {
+          setDisplayBar(false);
+        }, 1000);
+      } else {
+        setDisplayBar(false);
+      }
     }
   }, [counter]);
 
