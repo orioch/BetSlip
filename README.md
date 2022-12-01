@@ -1,4 +1,5 @@
 # BetSlip
+
 (I'm still working on creating this project, but you can access what I have made so far, and also look at the next [work items](https://github.com/orioch/BetSlip/issues) i am planning to do.)
 
 ## Table of Contents
@@ -12,12 +13,14 @@
 
 ## Overview
 
-This project is a “Betslip” - a small feature that exists in a Sportbook. 
+This project is a “Betslip” - a small feature that exists in a Sportbook.
 
-<img src="https://github.com/orioch/BetSlip/blob/main/Screen%20Shot%202022-11-30%20at%2021.36.09.png?raw=true" width=20% height=20%>  <img src="https://github.com/orioch/BetSlip/blob/main/Screen%20Shot%202022-11-30%20at%2021.42.29.png?raw=true" width=20% height=20%>
+<img src="https://github.com/orioch/BetSlip/blob/main/Screen%20Shot%202022-11-30%20at%2021.36.09.png?raw=true" width=20% height=20%> <img src="https://github.com/orioch/BetSlip/blob/main/Screen%20Shot%202022-11-30%20at%2021.42.29.png?raw=true" width=20% height=20%>
+
 ## Live Demo
 
 You can see a live demo of the project in [oriochayon.com/betslip](https://oriochayon.com/betslip)
+
 <!-- TODO: Add a screenshot of the live project.
     1. Link to a 'live demo.'
     2. Describe your overall experience in a couple of sentences.
@@ -26,10 +29,11 @@ You can see a live demo of the project in [oriochayon.com/betslip](https://orioc
  -->
 
 ### Built With
-* React Js
-* Redux & Redux Toolkit
-* MUI
-* CSS3
+
+- React Js
+- Redux & Redux Toolkit
+- MUI
+- CSS3
 
 <!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
 
